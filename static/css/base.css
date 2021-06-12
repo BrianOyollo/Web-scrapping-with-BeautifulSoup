@@ -1,0 +1,66 @@
+body{
+    height: 100%;
+}
+.main-body{
+    margin-left: 15%;
+    margin-right:15%;
+    height: 100%;
+
+}
+.title-container{
+
+}
+.title-container img{
+    opacity: 50%;
+}
+
+.site-title{
+  position: absolute;
+  bottom: 520px;
+  right: 650px;
+  color:white;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+}
+.navigation ul{
+    margin-bottom: -1px;
+}
+.navigation ul li{
+
+    display: inline;
+    padding-left:3px;
+    padding-right: 3px;
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: black;
+}
+.navigation ul li a:hover{
+    color: white;
+    background-color: green;
+    padding: 1px;
+    border-radius: 5px;
+}
+.job-list{
+    margin-left: 3%;
+    padding-bottom: 2%;
+    margin-right: 2%;
+}
+.job-details{
+    line-height: 7px;
+}
+.job-details a{
+    text-decoration: none;
+
+}
+.job-item{
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+.source{
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}

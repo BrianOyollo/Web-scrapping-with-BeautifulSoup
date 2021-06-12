@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel='stylesheet' href='{% static 'css/base.css' %}'>
+    <title>JobCentral</title>
+</head>
+<body class="bg-dark">
+<div class="main-body bg-light mt-1">
+    <div class="title-container">
+        <img src="image2.jpg" style="width: 956px; height: 150px;">
+        <div class="site-title">
+            <h4>JobCentral</h4>
+        </div>
+    </div>
+    <br>
+    <div class="navigation border-bottom">
+        <ul>
+            <li class="source text-white  mb-2 mt-2" ><a href="#">LinkedIn</a></li>
+            <li><a href="#">Glassdoor</a></li>
+            <li><a href="#">mmmm</a></li>
+            <li><a href="#">cc</a></li>
+        </ul>
+    </div>
+    <div class="job-list mt-2">
+        {% for job in items %}
+        <div class="job-item p-2 border border">
+            <div class="job-details">
+                <a style="text-decoration: none;" href="#" class="h5">{{ job.job}}</a>
+                <h6>{{ job.subtitle }}</h6>
+                <p>{{ job.location }}</p>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="">
+                    <h6 class="accordion-header" id="headingOne">
+                        <a class="" style="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1"
+                           aria-expanded="true" aria-controls="collapseOne">
+                            More Details
+                        </a>
+                        </h6>
+                        <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                             data-bs-parent="#accordionExample">
+                            <div class="border p-2 ">
+                                <h6>Job Description</h6>
+                                <h6>Responsibilities</h6>
+                                <h6>Requirements</h6>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+</html>
